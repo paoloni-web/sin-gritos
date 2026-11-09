@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow"><title>¡Compra confirmada! · Sin Gritos</title>
+<link rel="icon" href="img/icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--coral:#E0604A;--coral2:#F28B6E;--osc:#1f2937;--gris:#6b7280;--crema:#FBF4EF;--linea:#F1E6E0;--verde:#16A34A}
+html{-webkit-text-size-adjust:100%}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--crema);color:var(--osc);line-height:1.5}
+.wrap{max-width:480px;margin:0 auto;padding:14px 16px 40px}
+.top{display:flex;justify-content:center;padding:4px 0 10px}.top img{height:38px}
+.prog{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:10px 12px;margin-bottom:14px}
+.prog p{font-size:12.5px;font-weight:700;color:var(--coral);text-align:center;margin-bottom:7px;letter-spacing:.02em}
+.prog .b{height:8px;border-radius:99px;background:#f3e5de;overflow:hidden}.prog .b i{display:block;height:100%;background:linear-gradient(90deg,var(--coral2),var(--coral));border-radius:99px}
+.prog ol{display:flex;justify-content:space-between;list-style:none;margin-top:6px;font-size:11px;color:var(--gris)}.prog ol li.on{color:var(--osc);font-weight:700}
+.pill{display:table;margin:2px auto 10px;background:var(--coral);color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;padding:6px 12px;border-radius:99px}
+h1{font-size:25px;line-height:1.2;text-align:center;font-weight:800;letter-spacing:-.01em}h1 em{font-style:normal;color:var(--coral)}
+.pre{font-size:15px;color:#4b5563;text-align:center;margin:10px 4px 14px}
+.player{position:relative;width:100%;max-width:340px;margin:0 auto;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000 center/cover no-repeat;box-shadow:0 14px 40px rgba(120,60,40,.22)}
+#vslVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+#vslVideo::-webkit-media-controls,#vslVideo::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
+.tap{position:absolute;inset:0;z-index:1}
+.vbar{position:absolute;z-index:3;left:0;right:0;bottom:0;height:7px;background:rgba(255,255,255,.25)}.vbar i{display:block;height:100%;width:0;background:var(--coral);transition:width .25s linear}
+.snd{position:absolute;z-index:4;left:0;right:0;top:58%;margin:0 auto;width:min(80%,270px);border:0;border-radius:18px;background:var(--coral);color:#fff;padding:16px 14px;display:flex;flex-direction:column;align-items:center;gap:4px;font:inherit;box-shadow:0 12px 36px rgba(0,0,0,.4);cursor:pointer;animation:pulso 1.6s infinite}
+@keyframes pulso{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+.snd svg{width:42px;height:42px;fill:#fff}.snd b{font-size:17px;line-height:1.2}.snd span{font-size:14px}
+.resume{position:absolute;inset:0;z-index:5;background:rgba(0,0,0,.72);display:grid;place-items:center;padding:24px}
+.resume>div{width:min(100%,280px);text-align:center;color:#fff}.resume p{font-size:18px;font-weight:700;margin-bottom:14px}
+.resume button{display:block;width:100%;margin:8px 0;padding:14px;border:0;border-radius:14px;font:inherit;font-size:16px;font-weight:700;background:var(--coral);color:#fff;cursor:pointer}
+.resume .alt{background:rgba(255,255,255,.16)}
+.hidden{display:none!important}
+.aviso-snd{font-size:12.5px;color:var(--gris);text-align:center;margin-top:8px}
+.cta-box{margin:18px 0 6px;animation:entra .5s ease}
+@keyframes entra{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:10px}
+.badges span{background:#fff;border:1px solid #F3D9CF;color:#7A4B3E;font-size:12px;font-weight:700;padding:5px 10px;border-radius:99px}
+.si{display:block;width:100%;border:0;border-radius:16px;background:var(--verde);color:#fff;font:inherit;font-weight:800;font-size:19px;letter-spacing:.01em;padding:17px 12px 14px;cursor:pointer;box-shadow:0 10px 26px rgba(22,163,74,.35);line-height:1.2}
+.si small{display:block;font-size:13px;font-weight:600;opacity:.92;margin-top:5px}
+.si:active{transform:scale(.99)}
+.no{display:block;margin:14px auto 0;background:none;border:0;font:inherit;font-size:14px;color:var(--gris);text-decoration:underline;cursor:pointer;text-align:center;line-height:1.35;padding:6px}
+.nota{font-size:12px;color:var(--gris);text-align:center;margin-top:8px}
+.card{background:#fff;border:1px solid var(--linea);border-radius:20px;padding:18px 16px;margin-top:22px}
+.card h2{font-size:20px;line-height:1.25;text-align:center;margin-bottom:12px}
+.prod{display:block;width:100%;max-width:320px;margin:0 auto 12px;border-radius:16px}
+.items{list-style:none}.items li{display:flex;gap:10px;padding:10px 0;border-top:1px solid #f4ece7;font-size:14.5px}.items li:first-child{border-top:0}
+.items li:before{content:"";flex:none;width:22px;height:22px;margin-top:1px;border-radius:50%;background:var(--coral) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/15px no-repeat}
+.items b{display:block;font-size:15px}.items s{color:var(--gris);font-weight:600;font-size:13px;margin-left:4px}
+.precio{text-align:center;margin:14px 0 4px}.precio .a{color:var(--gris);font-size:15px}.precio .a s{font-weight:700}
+.precio .h{font-size:44px;font-weight:900;color:var(--coral);line-height:1.1}.precio .u{font-size:13.5px;color:#4b5563;font-weight:600}
+.gar{display:flex;gap:12px;align-items:center;margin-top:16px;background:#FFF8EC;border:1px solid #F3D27A;border-radius:16px;padding:12px}
+.gar .sello{flex:none;width:62px;height:62px;border-radius:50%;background:radial-gradient(circle,#F4C44F,#d9a52c);color:#5a3d00;display:grid;place-items:center;text-align:center;font-size:10px;font-weight:900;line-height:1.05;border:3px dashed #fff3cf}
+.gar p{font-size:13.5px;line-height:1.4}
+.legal{font-size:11.5px;color:#9ca3af;text-align:center;margin-top:26px;line-height:1.45}
+</style></head>
+<body><div class="wrap" style="text-align:center">
+<div class="top"><img src="img/logo-sin-gritos.png" alt="Sin Gritos"></div>
+<span class="pill" style="background:var(--verde)">✓ PAGO APROBADO</span>
+<h1>¡Listo! <em>Tu App Sin Gritos te espera.</em></h1>
+<p class="pre">Tu plan de 21 días vive en una app que abres desde tu celular. Solo falta crear tu cuenta: toma 1 minuto.</p>
+<div style="background:#fff4ef;border:2px solid var(--coral);border-radius:16px;padding:14px 16px;text-align:left;font-size:15px;line-height:1.45">
+⚠️ <b style="color:#b8432f">Usa el mismo correo con el que pagaste.</b> Así la app reconoce tu compra y todo lo que agregaste.<span id="mailTop" style="display:block;margin-top:6px;font-weight:800;word-break:break-all"></span></div>
+<a class="si go" href="https://sin-gritos-gentle-days.lovable.app" style="text-decoration:none;margin-top:16px;background:var(--coral);box-shadow:0 10px 26px rgba(224,96,74,.35)">ENTRAR A MI APP<small>Se abre en una pestaña nueva</small></a>
+<div class="card" style="text-align:left">
+  <h2>Así entras, paso a paso</h2>
+  <ul class="items">
+    <li><div><b>1. Toca "Entrar a mi app"</b>El botón de arriba abre tu App Sin Gritos.</div></li>
+    <li><div><b>2. Escribe tu correo de compra</b>Exactamente el mismo con el que pagaste. Te llega un enlace para entrar, o elige una contraseña.</div></li>
+    <li><div><b>3. Responde las preguntas de inicio</b>Tu nombre, la edad de tu hijo y tus momentos difíciles. Con eso la app ajusta tu plan.</div></li>
+    <li><div><b>4. Empieza por el Día 1</b>Un paso de 5 a 15 minutos al día. Y si estás por explotar, el botón "Estoy por explotar" te guía en 2 minutos.</div></li>
+  </ul>
+  <p class="nota" style="text-align:left;margin-top:10px">📲 Consejo: desde el navegador del celular, usa "Agregar a pantalla de inicio" y la tendrás como cualquier otra app.</p>
+</div>
+<a class="si go" href="https://sin-gritos-gentle-days.lovable.app" style="text-decoration:none;margin-top:18px;background:var(--coral);box-shadow:0 10px 26px rgba(224,96,74,.35)">ENTRAR A MI APP</a>
+<div class="card" style="text-align:left;font-size:14px">
+  <p><b>¿No te llega el correo para entrar?</b> Revisa Promociones o Spam y busca un mensaje de la app Sin Gritos. Comprueba que escribiste el mismo correo con el que pagaste.</p>
+  <p style="margin-top:10px"><b>¿Agregaste el Pase Familia o el Kit?</b> Todo se activa en la misma cuenta, con el mismo correo.</p>
+</div>
+<div class="gar" style="text-align:left"><div class="sello">21<br>DÍAS<br>GARANTÍA</div><p><b>Garantía de 21 días.</b> Si no te sirve, escríbenos y te devolvemos el 100 %.</p></div>
+<p class="legal">Contenido educativo y de hábitos; no es terapia ni diagnóstico. Si en tu casa hay violencia o temes por la seguridad de alguien, busca ayuda profesional o llama a la línea de emergencias de tu país.</p>
+</div>
+<script>
+const APP_URL = 'https://sin-gritos-gentle-days.lovable.app';
+const q = new URLSearchParams(location.search);
+let mail = (q.get('email') || q.get('customer_email') || '').trim().replace(/ /g, '+').toLowerCase();
+if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)) mail = '';
+document.querySelectorAll('a.go').forEach(a => { a.href = APP_URL + (mail ? '/?email=' + encodeURIComponent(mail) : ''); a.target = '_blank'; a.rel = 'noopener'; });
+if (mail) document.getElementById('mailTop').textContent = 'Tu correo de compra: ' + mail;
+</script></body></html>

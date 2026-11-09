@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow"><title>Espera un segundo · Sin Gritos</title>
+<link rel="icon" href="img/icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://pay.sheridanmktmng.com/scripts/upsell-processor.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--coral:#E0604A;--coral2:#F28B6E;--osc:#1f2937;--gris:#6b7280;--crema:#FBF4EF;--linea:#F1E6E0;--verde:#16A34A}
+html{-webkit-text-size-adjust:100%}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--crema);color:var(--osc);line-height:1.5}
+.wrap{max-width:480px;margin:0 auto;padding:14px 16px 40px}
+.top{display:flex;justify-content:center;padding:4px 0 10px}.top img{height:38px}
+.prog{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:10px 12px;margin-bottom:14px}
+.prog p{font-size:12.5px;font-weight:700;color:var(--coral);text-align:center;margin-bottom:7px;letter-spacing:.02em}
+.prog .b{height:8px;border-radius:99px;background:#f3e5de;overflow:hidden}.prog .b i{display:block;height:100%;background:linear-gradient(90deg,var(--coral2),var(--coral));border-radius:99px}
+.prog ol{display:flex;justify-content:space-between;list-style:none;margin-top:6px;font-size:11px;color:var(--gris)}.prog ol li.on{color:var(--osc);font-weight:700}
+.pill{display:table;margin:2px auto 10px;background:var(--coral);color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;padding:6px 12px;border-radius:99px}
+h1{font-size:25px;line-height:1.2;text-align:center;font-weight:800;letter-spacing:-.01em}h1 em{font-style:normal;color:var(--coral)}
+.pre{font-size:15px;color:#4b5563;text-align:center;margin:10px 4px 14px}
+.player{position:relative;width:100%;max-width:340px;margin:0 auto;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000 center/cover no-repeat;box-shadow:0 14px 40px rgba(120,60,40,.22)}
+#vslVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+#vslVideo::-webkit-media-controls,#vslVideo::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
+.tap{position:absolute;inset:0;z-index:1}
+.vbar{position:absolute;z-index:3;left:0;right:0;bottom:0;height:7px;background:rgba(255,255,255,.25)}.vbar i{display:block;height:100%;width:0;background:var(--coral);transition:width .25s linear}
+.snd{position:absolute;z-index:4;left:0;right:0;top:58%;margin:0 auto;width:min(80%,270px);border:0;border-radius:18px;background:var(--coral);color:#fff;padding:16px 14px;display:flex;flex-direction:column;align-items:center;gap:4px;font:inherit;box-shadow:0 12px 36px rgba(0,0,0,.4);cursor:pointer;animation:pulso 1.6s infinite}
+@keyframes pulso{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+.snd svg{width:42px;height:42px;fill:#fff}.snd b{font-size:17px;line-height:1.2}.snd span{font-size:14px}
+.resume{position:absolute;inset:0;z-index:5;background:rgba(0,0,0,.72);display:grid;place-items:center;padding:24px}
+.resume>div{width:min(100%,280px);text-align:center;color:#fff}.resume p{font-size:18px;font-weight:700;margin-bottom:14px}
+.resume button{display:block;width:100%;margin:8px 0;padding:14px;border:0;border-radius:14px;font:inherit;font-size:16px;font-weight:700;background:var(--coral);color:#fff;cursor:pointer}
+.resume .alt{background:rgba(255,255,255,.16)}
+.hidden{display:none!important}
+.aviso-snd{font-size:12.5px;color:var(--gris);text-align:center;margin-top:8px}
+.cta-box{margin:18px 0 6px;animation:entra .5s ease}
+@keyframes entra{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:10px}
+.badges span{background:#fff;border:1px solid #F3D9CF;color:#7A4B3E;font-size:12px;font-weight:700;padding:5px 10px;border-radius:99px}
+.si{display:block;width:100%;border:0;border-radius:16px;background:var(--verde);color:#fff;font:inherit;font-weight:800;font-size:19px;letter-spacing:.01em;padding:17px 12px 14px;cursor:pointer;box-shadow:0 10px 26px rgba(22,163,74,.35);line-height:1.2}
+.si small{display:block;font-size:13px;font-weight:600;opacity:.92;margin-top:5px}
+.si:active{transform:scale(.99)}
+.no{display:block;margin:14px auto 0;background:none;border:0;font:inherit;font-size:14px;color:var(--gris);text-decoration:underline;cursor:pointer;text-align:center;line-height:1.35;padding:6px}
+.nota{font-size:12px;color:var(--gris);text-align:center;margin-top:8px}
+.card{background:#fff;border:1px solid var(--linea);border-radius:20px;padding:18px 16px;margin-top:22px}
+.card h2{font-size:20px;line-height:1.25;text-align:center;margin-bottom:12px}
+.prod{display:block;width:100%;max-width:320px;margin:0 auto 12px;border-radius:16px}
+.items{list-style:none}.items li{display:flex;gap:10px;padding:10px 0;border-top:1px solid #f4ece7;font-size:14.5px}.items li:first-child{border-top:0}
+.items li:before{content:"";flex:none;width:22px;height:22px;margin-top:1px;border-radius:50%;background:var(--coral) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/15px no-repeat}
+.items b{display:block;font-size:15px}.items s{color:var(--gris);font-weight:600;font-size:13px;margin-left:4px}
+.precio{text-align:center;margin:14px 0 4px}.precio .a{color:var(--gris);font-size:15px}.precio .a s{font-weight:700}
+.precio .h{font-size:44px;font-weight:900;color:var(--coral);line-height:1.1}.precio .u{font-size:13.5px;color:#4b5563;font-weight:600}
+.gar{display:flex;gap:12px;align-items:center;margin-top:16px;background:#FFF8EC;border:1px solid #F3D27A;border-radius:16px;padding:12px}
+.gar .sello{flex:none;width:62px;height:62px;border-radius:50%;background:radial-gradient(circle,#F4C44F,#d9a52c);color:#5a3d00;display:grid;place-items:center;text-align:center;font-size:10px;font-weight:900;line-height:1.05;border:3px dashed #fff3cf}
+.gar p{font-size:13.5px;line-height:1.4}
+.legal{font-size:11.5px;color:#9ca3af;text-align:center;margin-top:26px;line-height:1.45}
+</style></head>
+<body><div class="wrap">
+<div class="top"><img src="img/logo-sin-gritos.png" alt="Sin Gritos"></div>
+<div class="prog"><p>Tu pedido aún no está completo · paso 3 de 4</p><div class="b"><i style="width:75%"></i></div><ol><li class="">Pago</li><li class="">Tu plan completo</li><li class="on">Para tu hijo</li><li class="">Acceso</li></ol></div>
+<span class="pill">ANTES DE TERMINAR</span>
+<h1>Es el mismo kit. <em>Solo cambia el precio.</em></h1>
+<p class="pre">Si fue por el precio, no queremos que tu hijo se quede sin esto (20 segundos).</p>
+<div class="player" id="player" style="background-image:url('v/D2.jpg?v=1794257912')">
+  <video id="vslVideo" src="v/D2.mp4?v=1794257912" poster="v/D2.jpg?v=1794257912" playsinline webkit-playsinline preload="auto" disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback"></video>
+  <div class="tap" id="tap"></div>
+  <div class="vbar"><i id="vbarFill"></i></div>
+  <button type="button" class="snd hidden" id="snd"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05A4.47 4.47 0 0 0 16.5 12zM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06A9 9 0 0 0 14 3.23z"/></svg><b>Tu video ya comenzó</b><span>Toca para escuchar</span></button>
+  <div class="resume hidden" id="resume"><div><p>Ya empezaste a ver este video</p><button type="button" id="cont">Continuar viendo</button><button type="button" id="rest" class="alt">Ver desde el principio</button></div></div>
+</div>
+<p class="aviso-snd">Sube el volumen. El botón aparece durante el video.</p>
+<div class="cta-box hidden"><div class="badges"><span>Solo en esta página</span><span>Un solo pago</span><span>Sin suscripción</span><span>Misma tarjeta</span></div>
+<button type="button" class="si" onclick="si()">SÍ, LO QUIERO POR 9 USD<small>Agregar el kit · pago único · misma tarjeta</small></button>
+<p class="nota">Se cobra en la misma tarjeta con la que acabas de pagar, sin volver a poner tus datos.</p>
+<button type="button" class="no" onclick="no()">No, gracias, terminar mi pedido</button></div>
+<div class="card">
+  <h2>Los mismos cuentos, juegos y fichas, por 9 USD.</h2>
+  <img class="prod" src="img/kit.png" alt="Kit de cuentos y juegos de calma por edad">
+  <p style="font-size:14px;font-weight:700;margin-bottom:4px">Se suma a tu pedido:</p>
+  <ul class="items"><li><div><b>Cuentos de calma por edad <s>27 USD</s></b>Cuentos cortos para leer en voz alta, de los 2 a los 12 años.</div></li><li><div><b>Juegos de calma de 5 minutos <s>20 USD</s></b>Respiración, "el volcán", el rincón de calma y la pausa en familia. Sin comprar nada.</div></li><li><div><b>Fichas de emociones <s>10 USD</s></b>Para que tu hijo le ponga nombre a lo que siente, imprimibles o en pantalla.</div></li><li><div><b>Guía de uso</b>Qué usar antes de dormir, después de una rabieta o al volver del colegio.</div></li></ul>
+  <div class="precio"><div class="a">Antes <s>17 USD</s> · valor total 57 USD</div><div class="h">Hoy 9 USD</div><div class="u">El mismo producto · pago único · sin suscripción</div></div>
+  <p class="nota">Este precio solo está en esta página. Dentro de la app cuesta 37 USD. Sin temporizadores ni cupos falsos.</p>
+  <div class="gar"><div class="sello">21<br>DÍAS<br>GARANTÍA</div><p><b>La misma garantía de 21 días de tu plan.</b> Si no te sirve, escríbenos y te devolvemos el 100 %.</p></div>
+</div>
+<div class="cta-box hidden cta2"><div class="badges"><span>Solo en esta página</span><span>Un solo pago</span><span>Sin suscripción</span><span>Misma tarjeta</span></div>
+<button type="button" class="si" onclick="si()">SÍ, LO QUIERO POR 9 USD<small>Agregar el kit · pago único · misma tarjeta</small></button>
+<p class="nota">Se cobra en la misma tarjeta con la que acabas de pagar, sin volver a poner tus datos.</p>
+<button type="button" class="no" onclick="no()">No, gracias, terminar mi pedido</button></div>
+<p class="legal">Contenido educativo y de hábitos; no es terapia ni diagnóstico. Si en tu casa hay violencia o temes por la seguridad de alguien, busca ayuda profesional o llama a la línea de emergencias de tu país.<br><br>Sin Gritos · Pago procesado de forma segura. En tu estado de cuenta aparecerá SINGRITOS.</p>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const CTA_DELAY = 16.1, VIDEO_URL = 'v/D2.mp4', VSL_KEY = 'sg_vsl_D2';
+const qs = new URLSearchParams(location.search);
+const KS = qs.get('ks') || qs.get('session_token') || '';
+const STEP_URL = 'https://pay.sheridanmktmng.com/u/ed3267b4df33c87b', NEXT = 'gracias.html';
+let ctaOn = false;
+function mostrarCTA(){ if (ctaOn) return; ctaOn = true; document.querySelectorAll('.cta-box').forEach(e => e.classList.remove('hidden')); }
+function si(){ acceptUpsell(STEP_URL); }
+function no(){
+  if (KS && typeof declineUpsell === 'function') return declineUpsell(STEP_URL);
+  const q = new URLSearchParams(location.search); location.href = NEXT + (q.toString() ? '?' + q : '');
+}
+(function(){
+  const box = $('player'), v = $('vslVideo'), fill = $('vbarFill'), snd = $('snd');
+  let conSonido = false;
+  const curva = x => 1 - Math.pow(1 - Math.min(Math.max(x, 0), 1), 2.2);  // barra rápida al principio
+  v.addEventListener('timeupdate', () => {
+    if (v.duration) fill.style.width = (curva(v.currentTime / v.duration) * 100).toFixed(2) + '%';
+    if (v.currentTime >= CTA_DELAY) { mostrarCTA(); try { localStorage.setItem(VSL_KEY + '_cta', '1'); } catch (e) {} }
+    if (conSonido && v.currentTime > 4) try { localStorage.setItem(VSL_KEY, String(Math.floor(v.currentTime))); } catch (e) {}
+  });
+  v.addEventListener('ended', () => { mostrarCTA(); try { localStorage.removeItem(VSL_KEY); } catch (e) {} });
+  v.addEventListener('pause', () => { if (!v.ended && !document.hidden) v.play().catch(() => {}); });
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && !v.ended) v.play().catch(() => {}); });
+  const sonar = desde => {
+    conSonido = true; snd.classList.add('hidden'); $('resume').classList.add('hidden');
+    v.muted = false; v.currentTime = desde;
+    v.play().catch(() => { v.muted = true; v.play(); snd.classList.remove('hidden'); conSonido = false; });
+  };
+  // autoplay en silencio con el aviso "Tu video ya comenzó"; al tocar empieza desde 0 con sonido
+  const autoplay = () => { v.muted = true; v.play().catch(() => {}); snd.classList.remove('hidden'); };
+  snd.addEventListener('click', () => sonar(0));
+  $('tap').addEventListener('click', () => { if (!conSonido) sonar(0); });
+  let visto = 0;
+  try { visto = parseInt(localStorage.getItem(VSL_KEY) || '0', 10); if (localStorage.getItem(VSL_KEY + '_cta')) mostrarCTA(); } catch (e) {}
+  if (visto > 8) {
+    $('resume').classList.remove('hidden');
+    $('cont').addEventListener('click', () => sonar(visto));
+    $('rest').addEventListener('click', () => sonar(0));
+  } else autoplay();
+  // red de seguridad: si el vídeo no carga, el botón aparece igual al cabo de un rato
+  setTimeout(() => { if (!v.duration || v.readyState < 2) mostrarCTA(); }, (CTA_DELAY + 15) * 1000);
+})();
+</script>
+
+</body></html>
